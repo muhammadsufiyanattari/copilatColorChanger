@@ -3,25 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-
-let myarr = [
-  { name: "Purple", Bgcolor: " #535bf2" },
-  { name: "Green", Bgcolor: " rgb(4, 147, 4)" },
-  { name: "Pink", Bgcolor: " rgb(244, 80, 107)" },
-  { name: "Brown", Bgcolor: " rgb(197, 146, 18)" },
-  { name: "Red", Bgcolor: " red" },
-  { name: "Yellow", Bgcolor: " rgb(231, 231, 12)" },
-  { name: "Black", Bgcolor: " black" },
-  { name: "Aqua", Bgcolor: " aqua" },
-  { name: "Yellow Green", Bgcolor: " yellowgreen" },
-  { name: "Dark Magenta", Bgcolor: " darkmagenta" },
-];
-
 function App() {
-  const [bgColor, setBgColor] = useState('white'); // Initial background color
+  const [bgColor, setBgColor] = useState('rgb(33, 33, 33,0.8)'); // Initial background color
 
-  const handleChangeColor = () => {
-    setBgColor(bgColor === 'white' ? 'green' : 'white'); // Toggle between white and lightblue
+  const handleChangeColor = (color) => {
+    setBgColor(color); // Toggle between white and lightblue
 };
   return (
     <>
@@ -29,10 +15,15 @@ function App() {
 
   
         <div>
-            <div style={{ backgroundColor: bgColor, width: '200px', height: '200px' }}>
-                Click the button to change my color!
+            <div className='mydiv' style={{ backgroundColor: bgColor, width: '1000px', height: '400px',margin:'10px',color:"white",borderRadius:"20px" }}>
+              <p style={{padding:'170px ' ,fontSize:'30px' ,fontWeight:"bold"}}>  Click the button to change my color!</p>
             </div>
-            <button onClick={handleChangeColor}>Change Color</button>
+            <button style={{ margin:"5px",background:'red'}} onClick={()=>handleChangeColor("red")}>Change Color</button>
+            <button style={{ margin:"5px",background:'pink'}} onClick={()=>handleChangeColor("pink")}>Change Color</button>
+            <button style={{ margin:"5px",background:'yellow'}} onClick={()=>handleChangeColor("yellow")}>Change Color</button>
+            <button style={{ margin:"5px",background:'green'}} onClick={()=>handleChangeColor("green")}>Change Color</button>
+            <button style={{ margin:"5px",background:'brown'}} onClick={()=>handleChangeColor("brown")}>Change Color</button>
+            <button style={{ margin:"5px",background:'yellowgreen'}} onClick={()=>handleChangeColor("yellowgreen")}>Change Color</button>
         </div>
    
 

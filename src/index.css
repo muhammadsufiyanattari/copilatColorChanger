@@ -28,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #303030;
 }
 
 h1 {
@@ -64,5 +65,12 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+    background-color:yellowgreen;
   }
+}
+
+.mydiv{
+  -webkit-box-shadow: -2px -3px 34px 24px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px -3px 34px 24px rgba(0,0,0,0.75);
+box-shadow: -2px -3px 34px 24px rgba(0,0,0,0.75);
 }
